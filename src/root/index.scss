@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import '/node_modules/primeflex/primeflex.css';
+@import 'primereact/resources/themes/bootstrap4-light-blue/theme.css';
+@import 'primereact/resources/primereact.min.css'; 
+@import 'primeicons/primeicons.css';
+@import './variables';
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+    sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.bumblebee__container{
+  max-width: $--container-width;
+  margin: auto;
+  border: 1px solid $--black;
+
+  @media(max-width: $--media-md){
+    padding: 0 24px; 
+  }
+}
+
+.p-inputtext{
+  &.p-inputtext-lg{
+    font-size: 1rem;
+    padding: 0.9375rem;
+  }
+}
+
+.p-inputtext-lg{
+   .p-inputtext{
+    font-size: 1rem;
+    padding: 0.9375rem;
+  }
+}
+
+.p-button-link,
+.p-button-outlined{
+    .p-button-label{
+        font-size: .875rem;
+    }
+}
+
+.p-button-outlined{
+    padding: .9rem;
+}
+
+
+
