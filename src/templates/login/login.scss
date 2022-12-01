@@ -2,7 +2,7 @@
 
 .bumblebee__login{
 
-    .bumblebee-login-background{
+    .bumblebee__login__background{
         box-sizing: border-box;
         background: url(../../assets/imagens/bumblebee-login-background.jpg);
         background-size: cover;
@@ -14,11 +14,7 @@
         }
     }
 
-    .bumblebee__logo{
-        width: 180px;
-    }
-
-
+   
     form{
         max-width: 400px;
         padding: 0 24px;

@@ -1,0 +1,32 @@
+@import '../../root/variables';
+
+.menu-list-buttons{
+
+    li{
+        list-style: none;
+    }
+
+    .p-button-lg{
+        height: 64px;
+        width: 280px;
+        border-radius: 8px;
+        background-color: $--white;
+        color: $--gray-2;
+        box-shadow: none;
+        
+
+        .p-button-label{
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-align: left;
+            margin-left: 10px;
+        }
+    }
+
+    .p-button__active{
+        background: rgba(0, 123, 255, 0.04);
+        color: #007bff;
+        border-color: transparent;
+    }
+}
+

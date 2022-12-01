@@ -1,17 +1,84 @@
+import { useFormik } from 'formik';
+import { classNames } from 'primereact/utils';
 import { Dialog } from 'primereact/dialog';
-const ResetPassword = () => {
+import MESSAGE from '../../utils/constants/message';
+import { InputText } from 'primereact/inputtext';
+import { Button } from 'primereact/button';
+import LABEL from '../../utils/constants/label';
+import { showNotification } from "../../utils/notification"
+import CONFIG from '../../utils/constants/config';
+const ResetPassword = ({
+    onHide,
+    visible,
+    notification
+}) => {
+
+    const formik = useFormik({
+        initialValues: {
+            email: '',
+            password: '',
+        },
+        validate: (data) => {
+            let errors = {};
+
+            if (!data.email) {
+                errors.email = MESSAGE.EMAIL_REQUIRED
+            }
+            else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(data.email)) {
+                errors.email = 'Invalid email address. E.g. example@email.com';
+            }
+
+            return errors;
+        },
+        onSubmit: (data) => {
+            showNotification(notification, 
+                CONFIG.SEVERITY_NOTIFICATION.SUCCESS, 
+                MESSAGE.RECOVER_ACCESS_SUCESS,
+                MESSAGE.RECOVER_ACCESS_SUCESS_MESSAGE
+            )
+            formik.resetForm();
+            onHide()
+        }
+    });
+    
+    const isFormFieldValid = (name) => !!(formik.touched[name] && formik.errors[name]);
+    const getFormErrorMessage = (name) => {
+        return isFormFieldValid(name) && <small className="p-error text-xs">{formik.errors[name]}</small>;
+    };
+
     return(
-        <Dialog header="Header" 
-            visible={true} 
-            onHide={() => console.log("a")} 
+        <Dialog header={MESSAGE.FORGOT_YOUR_PASSWORD} 
+            visible={visible} 
+            onHide={() => onHide()} 
             breakpoints={{'960px': '95vw'}}
-            style={{width: '50vw'}}
-            footer="">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            style={{width: '50vw'}}>
+                <section className='my-3'>
+                    <h3 className='text-center'>{MESSAGE.FORGOT_YOUR_PASSWORD_MESSAGE}</h3>
+                    <form className="bumblebee__login_form p-fluid w-full" onSubmit={formik.handleSubmit}>
+                        <div className='mb-3 mt-3 md:px-5'>
+                            <InputText 
+                                id="email" 
+                                name="email"
+                                type="text"
+                                value={formik.values.email}
+                                placeholder={LABEL.EMAIL}
+                                onChange={formik.handleChange}
+                                className={`p-inputtext-lg block ${classNames({ 'p-invalid': isFormFieldValid('email') })}`}/>
+                            {getFormErrorMessage('email')}
+                        </div>
+                        <div className='mb-3 md:px-5'>
+                            <Button label={LABEL.RECOVER_ACCESS} 
+                                className="p-button-lg"/>
+                        </div>
+                    </form>
+                </section>
         </Dialog>
     )
+}
+
+ResetPassword.defaultProps = {
+    onHide: () => null,
+    visible: false,
+    notification: null
 }
 export default ResetPassword
