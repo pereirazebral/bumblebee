@@ -6,6 +6,8 @@ import Logo from '../../components/logo'
 import MENU from '../../utils/constants/menu'
 import Header from '../../components/header'
 import MyData from '../../components/myData';
+import MySubscriptions from '../../components/mySubscriptions'
+
 import './index.css'
 const CustomerDashboard = ({
     user,
@@ -54,7 +56,7 @@ const CustomerDashboard = ({
         
         switch (menuActive) {
             case 0:
-                return <h1>{titleHeader}</h1>
+                return <MySubscriptions notification={notification}/>
             case 1:
                 return <MyData notification={notification}/>
             default:

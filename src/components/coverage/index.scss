@@ -1,0 +1,23 @@
+@import '../../root/variables';
+.card__coverage{
+    box-sizing: border-box;
+    width: 230px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease 0s;
+    border-radius: 4px;
+
+    @media(max-width:$--media-md){
+        width: 100%;
+    }
+
+    &:hover,
+    &.active{
+        border-color: $--primary-color;
+        box-shadow: rgba(44, 44, 82, 0.1) 0px 8px 16px, rgba(44, 44, 82, 0.1) 0px 4px 8px;
+        cursor: pointer;
+
+        span{
+            color: $--primary-color !important;
+        }
+    }
+}

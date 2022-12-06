@@ -19,7 +19,21 @@ const LABEL = {
     PHONE: 'Celular',
     EDIT: 'Editar',
     SAVE: 'Salvar',
-    CANCEL: 'Cancelar'
+    CANCEL: 'Cancelar',
+    COVERAGE: 'Cobertura',
+    CHANGE_LIMIT: 'Alterar Limite',
+    COVERAGE_LIMIT: 'Limite de cobertura de até',
+    COVERAGE_LABEL_01: 'Roubo e Furto: até',
+    COVERAGE_LABEL_02: 'Danos Elétricos: até',
+    CONFIRM_CHANGE: 'Confirmar alteração',
+    CANCEL_PLAN: 'Cancelar plano',
+    PLAN_CERTIFICATE: 'Certificado do plano',
+    SERVICE_MANUAL: 'Manual das assistências',
+    GENERAL_COVERAGE_CONDITIONS: 'Condições gerais das coberturas',
+    DOCUMENTS: 'Documentos',
+    ABOUT_THE_PLAN: 'Sobre o plano'
+
+
 }
 
 export default LABEL
