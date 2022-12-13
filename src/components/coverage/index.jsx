@@ -65,7 +65,7 @@ const Coverage = () => {
                 visible={visible} 
                 onHide={() => handleOnHide()} 
                 breakpoints={{'960px': '95vw'}}
-                style={{width: '50vw'}}>
+                style={{width: '80vw'}}>
                 <section className='flex px-3 py-3'>
                     <p className='text-center md:text-left'>{MESSAGE.COVERAGE_DESCRIPTION}</p>
                 </section>
