@@ -31,7 +31,21 @@ const LABEL = {
     SERVICE_MANUAL: 'Manual das assistências',
     GENERAL_COVERAGE_CONDITIONS: 'Condições gerais das coberturas',
     DOCUMENTS: 'Documentos',
-    ABOUT_THE_PLAN: 'Sobre o plano'
+    ABOUT_THE_PLAN: 'Sobre o plano',
+    ADDRESS: 'Endereço',
+    CHANGE_ADDRESS: 'Alterar Endereço',
+    EDIT_MY_ADDRESS: 'Edite o seu endereço de cobertura',
+    CURRENT_ADDRESS: 'Endereço atual',
+    CEP: 'CEP',
+    STREET: 'Rua',
+    NUMBER: 'Número',
+    COMPLEMENT: 'Complemento',
+    CITY: 'Cidade',
+    STATE: 'Estado',
+    NEIGHBORHOOD: 'Bairro',
+    SAVE_NEW_ADDRESS: 'Salvar novo endereço',
+    EXIT: 'Sair'
+
 
 
 }

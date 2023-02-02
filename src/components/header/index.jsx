@@ -73,19 +73,19 @@ const Header = ({
                 <Logo/>
             </section>
             <section className='flex w-full'>
-                <div className='flex flex-row-reverse lg:flex-row justify-content-between lg:justify-content-end align-items-center w-full'>
-                    <div className='flex align-items-center'>
-                        <div className='flex flex-column align-items-end justify-content-center pr-2'>
+                <div className='flex flex-row justify-content-start lg:justify-content-end align-items-center w-full'>
+                    <div className='flex flex-row-reverse align-items-center'>
+                        <div className='flex flex-column align-items-start justify-content-center pr-2'>
                             <p className='text-xs p-0'>{user && user.name || ''}</p>
                             <p className='text-xs p-0'>{user && user.email || ''}</p>
                         </div>
                         <Avatar label="G" 
                             className="mr-2" 
                             size="large"
-                            style={{ backgroundColor: '#2196F3', color: '#ffffff' }} 
+                            style={{ backgroundColor: '#f58022', color: '#333' }} 
                             shape="circle" />
                     </div>
-                    <div>
+                    {/* <div className='hidden lg:block'>
                         <Menu model={items} 
                             popup 
                             ref={menu} 
@@ -95,7 +95,7 @@ const Header = ({
                             aria-controls="menu__user" 
                             aria-haspopup
                             className='p-button-rounded p-button-text' />
-                    </div>
+                    </div> */}
                     </div>
 
             </section>

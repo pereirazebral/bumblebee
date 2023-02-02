@@ -82,7 +82,6 @@ const Login = ({
     return(
         <>
             <section className="bumblebee__login lg:h-screen bumblebee__container flex flex-column lg:flex-row justify-content-center align-items-center">
-                <div className='bumblebee__login__background w-full lg:h-full'></div>
                 <div className='w-full lg:h-full flex flex-column lg:justify-content-start lg:justify-content-center align-items-center py-5'>
                     <div>
                         <Logo/>

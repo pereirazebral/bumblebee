@@ -1,0 +1,20 @@
+@import '../../root/variables';
+.bumblebee__container-menu-mobile{
+   background-color:  $--gray-1;
+
+   .bumblebee__menu-list-buttons{
+    display: flex;
+    padding-top: 0 !important;
+
+    li{
+        padding-bottom: 0 !important;
+        display: flex;
+        align-items: center;
+
+        .p-button-lg {
+            height: auto;
+        }
+    
+    }
+   }
+}

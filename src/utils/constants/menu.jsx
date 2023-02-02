@@ -15,6 +15,10 @@ const MENU = [
     {
         label: LABEL.SAC,
         icon: 'pi pi-phone'
+    },
+    {
+        label: LABEL.EXIT,
+        icon: 'pi pi-sign-out'
     }
 ]
 

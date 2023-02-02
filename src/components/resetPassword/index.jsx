@@ -55,7 +55,7 @@ const ResetPassword = ({
                 <section className='my-3'>
                     <h3 className='text-center'>{MESSAGE.FORGOT_YOUR_PASSWORD_MESSAGE}</h3>
                     <form className="bumblebee__login_form p-fluid w-full" onSubmit={formik.handleSubmit}>
-                        <div className='mb-3 mt-3 md:px-5'>
+                        <div className='mb-3 mt-3 lg:px-5'>
                             <InputText 
                                 id="email" 
                                 name="email"
@@ -66,7 +66,7 @@ const ResetPassword = ({
                                 className={`p-inputtext-lg block ${classNames({ 'p-invalid': isFormFieldValid('email') })}`}/>
                             {getFormErrorMessage('email')}
                         </div>
-                        <div className='mb-3 md:px-5'>
+                        <div className='mb-3 lg:px-5'>
                             <Button label={LABEL.RECOVER_ACCESS} 
                                 className="p-button-lg"/>
                         </div>

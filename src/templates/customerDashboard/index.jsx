@@ -1,18 +1,21 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom'
 import PropTypes from 'prop-types';
 import { Button } from 'primereact/button'
-import Logo from '../../components/logo'
+import Logo from '../../assets/imagens/logo-min.png'
 import MENU from '../../utils/constants/menu'
 import Header from '../../components/header'
 import MyData from '../../components/myData';
 import MySubscriptions from '../../components/mySubscriptions'
+import MenuMobile from '../../components/MenuMobile'
 
 import './index.css'
 const CustomerDashboard = ({
     user,
     notification
 }) => {
+    const navigate = useNavigate()
     
     const [ menuActive, setMenuActive] = useState(0)
     const [ titleHeader, setTitleHeader] = useState('')
@@ -23,8 +26,12 @@ const CustomerDashboard = ({
 
     const handleClickMenu = (item) => {
         const { index, label} = item
-        setMenuActive(index) 
-        setTitleHeader(label)
+        if(index === 4){
+            navigate('/login')
+        }else{
+            setMenuActive(index) 
+            setTitleHeader(label)
+        }
     }
 
     const handleClickMenuHeader = (index, label) => {
@@ -36,9 +43,9 @@ const CustomerDashboard = ({
         const menus = MENU.map((item, index) => {
             item.index = index
             return(
-                <li key={index} className="pb-3">
+                <li key={index} className="pb-2">
                     <Button icon={item.icon}
-                        className={`p-button-raised p-button-text p-button-lg text-lg ${menuActive === index && 'p-button__active'}`} 
+                        className={`flex flex-column align-items-center justify-content-center p-button-raised p-button-text p-button-lg text-lg ${menuActive === index && 'bumblebee__p-button__active'}`} 
                         label={item.label}
                         onClick={ () => handleClickMenu(item)}/>
                 </li>
@@ -46,7 +53,7 @@ const CustomerDashboard = ({
         }) 
         
         return(
-            <ul className='menu-list-buttons pt-5'>
+            <ul className='bumblebee__menu-list-buttons pt-5'>
                 {menus}
             </ul>
         )
@@ -66,23 +73,25 @@ const CustomerDashboard = ({
     
     
     return(
-        <section className='grid lg:h-screen'>
-            <section className='col-3 hidden lg:block  bg__gray-1 py-4 px-4'>
-                <section className='flex flex-column align-items-end'>
-                    <div>
-                        <Logo/> 
+        <section className='grid lg:h-screen mr-0 mt-0 ml-0'>
+            <section className='col-1 hidden lg:block bg__black-33 py-6 px-1'>
+                <section className='flex flex-column align-items-center'>
+                    <div className=''>
+                        <img className='bumblebee__logo_min' src={Logo} alt="logo-min"/>
                     </div>
                     <div>
                         {getMenu()}
                     </div>
                 </section>
             </section>
-           
-            <section className='col-12 lg:col-9 py-5 lg:py-6 px-3 lg:px-5 max__1100 m-full md:mx-auto flex flex-column'>
+           <section className='col-12 lg:col-11 p-0 lg:p-2'>
+            <section className='py-5 lg:py-6 px-3 lg:px-5 max__1100 m-full lg:mx-auto flex flex-column '>
                 <Header title={titleHeader} handleClickMenuHeader={handleClickMenuHeader}/>
                 <section className='py-6'> 
                     {getContent()}
                 </section>
+                <MenuMobile menu={getMenu()}/>
+            </section>
             </section>
         </section>
        

@@ -1,6 +1,6 @@
 @import '../../root/variables';
 
-.menu-list-buttons{
+.bumblebee__menu-list-buttons{
 
     li{
         list-style: none;
@@ -8,25 +8,36 @@
 
     .p-button-lg{
         height: 64px;
-        width: 280px;
+        width: 100%;
         border-radius: 8px;
-        background-color: $--white;
-        color: $--gray-2;
         box-shadow: none;
+
+        &:hover{
+            color: $--orange-22 !important;
+        }
         
 
         .p-button-label{
-            font-weight: 700;
-            font-size: 1.1rem;
-            text-align: left;
-            margin-left: 10px;
+            font-weight: 500;
+            font-size: 0.6rem;
+            text-align: center;
+        }
+
+        .p-button-icon{
+            margin-right: 0;
         }
     }
 
-    .p-button__active{
+    
+
+    .bumblebee__p-button__active{
         background: rgba(0, 123, 255, 0.04);
-        color: $--primary-color;
+        color: $--orange-22 !important;
         border-color: transparent;
     }
+}
+
+.bumblebee__logo_min{
+    width: 50px;
 }
 

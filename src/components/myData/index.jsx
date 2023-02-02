@@ -68,7 +68,7 @@ const MyData = ({
                 <Avatar label="G" 
                     className="mr-2" 
                     size="large"
-                    style={{ backgroundColor: '#2196F3', color: '#ffffff' }} 
+                    style={{ backgroundColor: '#f58022', color: '#333' }} 
                     shape="circle" />
                 <h2>Garbe Solutions</h2>
             </section>

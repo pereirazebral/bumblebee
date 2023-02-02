@@ -2,19 +2,6 @@
 
 .bumblebee__login{
 
-    .bumblebee__login__background{
-        box-sizing: border-box;
-        background: url(../../assets/imagens/bumblebee-login-background.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-
-        @media(max-width: $--media-md){
-            display: none;
-        }
-    }
-
-   
     form{
         max-width: 400px;
         padding: 0 24px;
@@ -24,6 +11,5 @@
             padding: 0;
         }
     }
-
    
 }

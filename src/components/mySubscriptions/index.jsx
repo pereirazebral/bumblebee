@@ -4,13 +4,15 @@ import { Menu } from 'primereact/menu';
 import { Button } from 'primereact/button';
 import LABEL from '../../utils/constants/label';
 import Coverage from '../coverage';
-
+import Address from '../address';
+import './index.css'
+import { ReactComponent as Company } from '../../assets/imagens/company.svg'
 const __MOCK__ = [
     {
-        subscriptionsTitle: "Plano de Garbe Solutions 01"
+        subscriptionsTitle: "Plano 1201201201"
     },
     {
-        subscriptionsTitle: "Plano de Garbe Solutions 02"
+        subscriptionsTitle: "Plano 1201203201"
     }
 ]
 
@@ -54,8 +56,6 @@ const MySubscriptions = () => {
         }
     ];
 
-
-
     return(
        <>
         {__MOCK__.map((item, index) => {
@@ -63,7 +63,10 @@ const MySubscriptions = () => {
                 <section key={index} className='flex flex-column py-3'>
                     <Card>
                         <section className='flex justify-content-between align-items-center'>
-                            <h2 className='text-xl font-semibold'>{item.subscriptionsTitle}</h2>
+                            <div className='flex gap-2 align-items-center'>
+                                <h2 className='text-xl font-semibold'>{item.subscriptionsTitle}</h2>
+                                <Company/>
+                                </div>
                             <div>
                                 <Menu model={items} 
                                     popup 
@@ -76,8 +79,11 @@ const MySubscriptions = () => {
                                     className='p-button-rounded p-button-text'/>
                             </div>
                         </section>
-                        <section>
+                        <section className='flex flex-column lg:flex-row align-items-top pt-3'>
                             <Coverage/>
+                            <div className='bumblebee__container-section ml-0 pl-0 lg:ml-3 lg:pl-3'>
+                                <Address/>
+                            </div>
                         </section>
                     </Card>
                 </section>

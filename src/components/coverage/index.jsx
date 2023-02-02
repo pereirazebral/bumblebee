@@ -63,14 +63,12 @@ const Coverage = () => {
             </section>
             <Dialog header={MESSAGE.COVERAGE_TITLE} 
                 visible={visible} 
-                onHide={() => handleOnHide()} 
-                breakpoints={{'960px': '95vw'}}
-                style={{width: '80vw'}}>
+                onHide={() => handleOnHide()}>
                 <section className='flex px-3 py-3'>
-                    <p className='text-center md:text-left'>{MESSAGE.COVERAGE_DESCRIPTION}</p>
+                    <p className='text-center lg:text-left'>{MESSAGE.COVERAGE_DESCRIPTION}</p>
                 </section>
                 <section className='flex py-3'>
-                    <ul className='flex justify-content-around flex-wrap gap-2 px-3 md:px-0'>
+                    <ul className='flex justify-content-around flex-wrap gap-2 px-3 lg:px-0'>
                         {
                             __MOCK__.map((item, index) => {
                                 return(
