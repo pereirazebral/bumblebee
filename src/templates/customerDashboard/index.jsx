@@ -5,10 +5,12 @@ import PropTypes from 'prop-types';
 import { Button } from 'primereact/button'
 import Logo from '../../assets/imagens/logo-min.png'
 import MENU from '../../utils/constants/menu'
+import { SigninContext } from '../../contexts/ SigninContext'
 import Header from '../../components/header'
 import MyData from '../../components/myData';
 import MySubscriptions from '../../components/mySubscriptions'
 import MenuMobile from '../../components/MenuMobile'
+import useToken from '../../hooks/useAuth.hook';
 
 import './index.css'
 const CustomerDashboard = ({
@@ -16,7 +18,7 @@ const CustomerDashboard = ({
     notification
 }) => {
     const navigate = useNavigate()
-    
+    const {removeToken } = useToken()
     const [ menuActive, setMenuActive] = useState(0)
     const [ titleHeader, setTitleHeader] = useState('')
     
@@ -27,16 +29,21 @@ const CustomerDashboard = ({
     const handleClickMenu = (item) => {
         const { index, label} = item
         if(index === 4){
-            navigate('/login')
+            logout()
         }else{
             setMenuActive(index) 
             setTitleHeader(label)
         }
     }
 
+    const logout = () => {
+        removeToken()
+    }
+
     const handleClickMenuHeader = (index, label) => {
-        setMenuActive(index) 
-        setTitleHeader(label)
+            setMenuActive(index) 
+            setTitleHeader(label)
+        
     }
     
     const getMenu = () => {

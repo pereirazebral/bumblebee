@@ -7,6 +7,7 @@ import { Avatar } from 'primereact/avatar';
 import { InputText } from 'primereact/inputtext';
 import { Dropdown } from 'primereact/dropdown';
 import { Button } from 'primereact/button';
+import { InputMask } from 'primereact/inputmask';
 import MESSAGE from '../../utils/constants/message';
 import LABEL from '../../utils/constants/label';
 import GENRES from '../../utils/constants/genre';
@@ -77,7 +78,8 @@ const MyData = ({
                     <section className='flex flex-column lg:flex-row gap-5'>
                         <div className="w-full">
                         <label className='text-xs text-color-secondary' htmlFor="cpf">{LABEL.CPF}</label>
-                            <InputText 
+                            <InputMask
+                                mask='999.999.999-99' 
                                 id="cpf" 
                                 name="cpf"
                                 type="text"
@@ -116,7 +118,8 @@ const MyData = ({
                         </div>
                         <div className="w-full">
                             <label className='text-xs text-color-secondary' htmlFor="birthDate">{LABEL.BIRTH_DATE}</label>
-                            <InputText 
+                            <InputMask 
+                                mask='99/99/9999'
                                 id="birthDate" 
                                 name="birthDate"
                                 type="text"
@@ -144,7 +147,8 @@ const MyData = ({
                         </div>
                         <div className="w-full">
                             <label className='text-xs text-color-secondary' htmlFor="phone">{LABEL.PHONE}</label>
-                            <InputText 
+                            <InputMask 
+                                mask='(99)99999-9999'
                                 id="phone" 
                                 name="phone"
                                 type="text"

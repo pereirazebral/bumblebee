@@ -4,7 +4,7 @@ const CONFIG = {
         INFO: 'info',
         SUCCESS: 'success',
         WARN: 'warn',
-        ERRO: 'error'
+        ERROR: 'error'
     }
 
 }

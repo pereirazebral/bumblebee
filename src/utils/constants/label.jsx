@@ -1,5 +1,6 @@
 const LABEL = {
     LOGIN_TITLE: 'Bem vindo',
+    USER: 'Usuário',
     EMAIL: 'E-mail',
     PASSWORD: 'Senha',
     LOGIN: 'Entrar',

@@ -13,12 +13,16 @@ import { showNotification } from "../../utils/notification"
 import './login.css'
 import { useState } from 'react';
 import CONFIG from '../../utils/constants/config';
+import API from '../../utils/constants/api'
+
 const Login = ({
     notification,
-    userContext
+    setUserContext,
+    setUserToken
 }) => {
     const [ visibleModalResetPassword, setVisibleModalResetPassword] = useState(false)
-    
+    const [ isLoadingRequest, setLoadingRequest] = useState(false)
+
 
     const showPasswordReset = () => {
         setVisibleModalResetPassword(true)
@@ -37,29 +41,29 @@ const Login = ({
         )
     }
 
-    const setForlgata = (data) => {
-        const user = {
-            email: data.email,
-            name: '',
-            password: data.password
-        }
-        userContext(user)
+    const setResutData = (data) => {
+        setUserToken(data)
+        // setUserContext({
+        //     user: 'vinicius',
+        //     password: 'ssddsdsfeweqwddqe3',
+        //     email: 'viniciusp93@gmail.com'
+        // })
     }
 
     const formik = useFormik({
         initialValues: {
-            email: '',
+            user: '',
             password: '',
         },
         validate: (data) => {
             let errors = {};
 
-            if (!data.email) {
-                errors.email = MESSAGE.EMAIL_REQUIRED
+            if (!data.user) {
+                errors.user = MESSAGE.USER_REQUIRED
             }
-            else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(data.email)) {
-                errors.email = 'Invalid email address. E.g. example@email.com';
-            }
+            // else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(data.email)) {
+            //     errors.user = 'Invalid email address. E.g. example@email.com';
+            // }
 
             if (!data.password) {
                 errors.password = MESSAGE.PASSWORD_REQUIRED
@@ -68,10 +72,44 @@ const Login = ({
             return errors;
         },
         onSubmit: (data) => {
-            formik.resetForm();
-            setForlgata(data)
+            authLogin(data.user, data.password)
         },
     });
+
+    const authLogin = async (user, password) => {
+        setLoadingRequest(true)
+        const options ={
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/vnd.api+json',
+                'Accept': '*/*',
+            },
+            body: JSON.stringify({
+                UserID: user,
+                Password: password
+            })
+        }
+
+        await fetch(API.AUTH_LOGIN, options)
+            .then((response) => response.json())
+            .then((data) => {
+                setResutData(data)
+            })
+            .catch((error) => {
+                console.log("error", error)
+                showNotification(notification, 
+                    CONFIG.SEVERITY_NOTIFICATION.ERROR, 
+                    MESSAGE.ERROR_DEFAULT,
+                    `${MESSAGE.ERROR_DEFAULT_MESSAGE}`,
+                )
+                setLoadingRequest(false)
+            })
+            .finally(() => {
+            })
+    }
+
+    
+  
     
     const isFormFieldValid = (name) => !!(formik.touched[name] && formik.errors[name]);
     const getFormErrorMessage = (name) => {
@@ -92,14 +130,15 @@ const Login = ({
                     <form className="bumblebee__login_form p-fluid w-full" onSubmit={formik.handleSubmit} >
                         <div className='mb-3'>
                             <InputText 
-                                id="email" 
-                                name="email"
+                                id="user" 
+                                name="user"
                                 type="text"
-                                value={formik.values.email}
-                                placeholder={LABEL.EMAIL}
+                                value={formik.values.user}
+                                placeholder={LABEL.USER}
                                 onChange={formik.handleChange}
-                                className={`p-inputtext-lg block ${classNames({ 'p-invalid': isFormFieldValid('email') })}`}/>
-                            {getFormErrorMessage('email')}
+                                className={`p-inputtext-lg block ${classNames({ 'p-invalid': isFormFieldValid('user') })}`}
+                                disabled={isLoadingRequest}/>
+                            {getFormErrorMessage('user')}
                         </div>
                         <div className='mb-3'>
                             <Password toggleMask 
@@ -109,23 +148,28 @@ const Login = ({
                                 value={formik.values.password}
                                 placeholder={LABEL.PASSWORD}
                                 className={`p-inputtext-lg block ${classNames({ 'p-invalid': isFormFieldValid('password') })}`}
-                                onChange={formik.handleChange}/>
+                                onChange={formik.handleChange}
+                                disabled={isLoadingRequest}/>
                             {getFormErrorMessage('password')}
                         </div>
                         <Button type="submit" 
-                            label={LABEL.LOGIN} 
-                            className="p-button-lg mb-3"/>
+                            label={!isLoadingRequest && LABEL.LOGIN || '' } 
+                            className="p-button-lg mb-3 w-full"
+                            loading={isLoadingRequest}/>
+                        
                     </form>
 
                     <div>
                         <Button label={LABEL.PASSWORD_RESET} 
                             className="p-button-link text-sm p-0"
-                            onClick={() => showPasswordReset()}/>
+                            onClick={() => showPasswordReset()}
+                            disabled={isLoadingRequest}/>
                     </div>
                     <div>
                         <Button label={LABEL.EMAIL_FORGOT} 
                             className="p-button-link text-sm mb-5 p-0" 
-                            onClick={() => showNotificationEmailForgot()}/>
+                            onClick={() => showNotificationEmailForgot()}
+                            disabled={isLoadingRequest}/>
                     </div>
                     
                     <p className="text-xs mb-2">{LABEL.HIRE_HERE_TEXT}</p>
@@ -148,11 +192,13 @@ const Login = ({
 }
 Login.propTypes = {
     notification: PropTypes.object,
-    setUserContext: PropTypes.func
+    setUserContext: PropTypes.func,
+    setUserToken: PropTypes.func
 }
 Login.defaultProps = {
     notification: null,
-    setUserContext: null
+    setUserContext: null,
+    setUserToken: null
 }
 
 export default Login

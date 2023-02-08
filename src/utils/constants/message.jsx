@@ -1,4 +1,5 @@
 const MESSAGE = {
+    USER_REQUIRED: 'Usuário é obrigatório',
     EMAIL_REQUIRED: 'Email é obrigatório',
     PASSWORD_REQUIRED: 'Senha é obrigatória',
     FORGOT_YOUR_EMAIL:'Esqueceu seu email?',
@@ -10,7 +11,10 @@ const MESSAGE = {
     UPDADE_MY_DATA: 'Alteração de dados', 
     UPDADE_MY_DATA_MESSAGE: 'Dados alterados com sucesso.',
     COVERAGE_TITLE: 'Edite o seu limite de cobertura',
-    COVERAGE_DESCRIPTION: 'Lembrando que ele é referente a quantia máxima que poderia ser recebida ao acionar essa cobertura.'
+    COVERAGE_DESCRIPTION: 'Lembrando que ele é referente a quantia máxima que poderia ser recebida ao acionar essa cobertura.',
+    ERROR_DEFAULT: 'Ops! Algo de errado aconteceu',
+    ERROR_DEFAULT_MESSAGE: 'Percebemos um erro, tente novamente mais tarde.'
+
 
 }
 export default MESSAGE
