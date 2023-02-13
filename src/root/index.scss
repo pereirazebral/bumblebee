@@ -8,7 +8,7 @@
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
+  font-size: .875rem;
   font-weight: normal;
 }
 
@@ -27,17 +27,28 @@ body{
 
 .p-inputtext{
   &.p-inputtext-lg{
-    font-size: 1rem;
+    font-size: .875rem;;
     padding: 0.9375rem;
   }
+
+  &::placeholder{
+    font-size: .875rem;
+  }
 }
+
+.p-dropdown-label,
+.p-dropdown-empty-message,
+.p-dropdown-item{
+  font-size: .875rem;
+}
+
 .p-dropdown-lg{
-  font-size: 1rem;
+  font-size: .875rem;;
   padding: 0.40rem;
 }
 .p-inputtext-lg{
   .p-inputtext{
-    font-size: 1rem;
+    font-size: .875rem;;
     padding: 0.9375rem;
   }
 }
@@ -52,7 +63,7 @@ body{
 
 
 .p-menuitem-text{
-  font-size: 0.8rem;
+  font-size: 0.875rem;
 }
 .p-button-outlined{
     padding: .9rem;
@@ -120,6 +131,10 @@ body{
       color: $--orange-22;
       background-color: transparent;
   }
+}
+
+.p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight{
+  background-color: $--orange-22;
 }
 
 .p-dialog{

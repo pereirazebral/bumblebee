@@ -113,7 +113,7 @@ const Login = ({
     
     const isFormFieldValid = (name) => !!(formik.touched[name] && formik.errors[name]);
     const getFormErrorMessage = (name) => {
-        return isFormFieldValid(name) && <small className="p-error text-xs">{formik.errors[name]}</small>;
+        return isFormFieldValid(name) && <small className="p-error text-sm">{formik.errors[name]}</small>;
     };
 
 
@@ -172,15 +172,15 @@ const Login = ({
                             disabled={isLoadingRequest}/>
                     </div>
                     
-                    <p className="text-xs mb-2">{LABEL.HIRE_HERE_TEXT}</p>
+                    <p className="text-sm mb-2">{LABEL.HIRE_HERE_TEXT}</p>
 
                     <Button label={LABEL.HIRE_HERE} 
                         className="p-button-outlined" />
 
-                    <p className="text-xs mb-4 lg:mb-2 lg:flex align-items-center mt-7 text-center">Clicando em "Entrar" você concorda com nossos 
-                        <Button className="p-button-link text-xs py-0 px-1" label=' Termos e condições'/>
-                        <span className='text-xs'>e</span>
-                        <Button className="p-button-link text-xs py-0 px-1" label='Política de Privacidade'/>
+                    <p className="text-sm mb-4 lg:mb-2 lg:flex align-items-center mt-7 text-center">Clicando em "Entrar" você concorda com nossos 
+                        <Button className="p-button-link text-sm py-0 px-1" label=' Termos e condições'/>
+                        <span className='text-sm'>e</span>
+                        <Button className="p-button-link text-sm py-0 px-1" label='Política de Privacidade'/>
                     </p>
                 </div>
             </section>

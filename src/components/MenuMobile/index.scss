@@ -1,9 +1,9 @@
 @import '../../root/variables';
 .bumblebee__container-menu-mobile{
-   background-color:  $--gray-1;
-
-   .bumblebee__menu-list-buttons{
+   
+    .bumblebee__menu-list-buttons{
     display: flex;
+    justify-content: space-between;
     padding-top: 0 !important;
 
     li{
@@ -13,6 +13,13 @@
 
         .p-button-lg {
             height: auto;
+            border: none;
+            box-shadow: none;
+            padding: 10px 0;
+
+            .p-button-label{
+                font-size: 0.6rem;
+            }
         }
     
     }

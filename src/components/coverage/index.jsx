@@ -42,17 +42,17 @@ const Coverage = () => {
         <>
             <section className='flex flex-column py-3'>
                 <div>
-                    <h2 className='text-xs font-semibold'>{LABEL.COVERAGE}</h2>
+                    <h2 className='text-sm font-semibold'>{LABEL.COVERAGE}</h2>
                 </div>
                 <div className='pt-2'>
-                    <p className='text-xs text-color-secondary'>{LABEL.COVERAGE_LIMIT}</p>
+                    <p className='text-sm text-color-secondary'>{LABEL.COVERAGE_LIMIT}</p>
                 </div>
                 <div className='pt-0'>
                     <span className='text-primary text-xl font-semibold'>{FORMAT_PRICE(coverageActive?.price)}</span>
                 </div>
                 <div className='pt-2'>
-                    <p className='text-xs text-color-secondary'>{LABEL.COVERAGE_LABEL_01} <span className="font-semibold text-xs text-color">${FORMAT_PRICE(coverageActive?.price_cov01)}</span></p>
-                    <p className='text-xs text-color-secondary'>{LABEL.COVERAGE_LABEL_02} <span className="font-semibold text-xs text-color">${FORMAT_PRICE(coverageActive?.price_cov02)}</span></p>
+                    <p className='text-sm text-color-secondary'>{LABEL.COVERAGE_LABEL_01} <span className="font-semibold text-sm text-color">${FORMAT_PRICE(coverageActive?.price_cov01)}</span></p>
+                    <p className='text-sm text-color-secondary'>{LABEL.COVERAGE_LABEL_02} <span className="font-semibold text-sm text-color">${FORMAT_PRICE(coverageActive?.price_cov02)}</span></p>
                 </div>
                 <div className='py-2'>
                     <Button className="p-button-text p-0 text-sm font-semibold"
@@ -79,7 +79,7 @@ const Coverage = () => {
                                                 <img src={item.icon} alt='icon'/>
                                             </div>
                                             <div className='pt-1'>
-                                                <span className='text-xs'>até</span>
+                                                <span className='text-sm'>até</span>
                                             </div>
                                             <div>
                                                 <span className='text-lg font-semibold text-300 text-color-secondary price'>R$ {item.priceLabel}</span>
@@ -88,16 +88,16 @@ const Coverage = () => {
                                                 <hr className='w-full'/>
                                             </div>
                                             <div>
-                                            <span className='text-xs text-color-secondary'>{LABEL.COVERAGE_LABEL_01} <span className='text-xs font-semibold'>{FORMAT_PRICE(item.price_cov01)}</span></span>
+                                            <span className='text-sm text-color-secondary'>{LABEL.COVERAGE_LABEL_01} <span className='text-sm font-semibold'>{FORMAT_PRICE(item.price_cov01)}</span></span>
                                             </div>
                                             <div>
-                                                <span className='text-xs text-color-secondary'>{LABEL.COVERAGE_LABEL_02} <span className='text-xs font-semibold'>{FORMAT_PRICE(item.price_cov02)}</span></span>
+                                                <span className='text-sm text-color-secondary'>{LABEL.COVERAGE_LABEL_02} <span className='text-sm font-semibold'>{FORMAT_PRICE(item.price_cov02)}</span></span>
                                             </div>
                                             <div className='w-full mt-2 mb-1'>
                                                 <hr/>
                                             </div>
                                             <div>
-                                                <span className='text-xs text-color-secondary'>{`${FORMAT_PRICE(item.priceMonth)}/mês`}</span>
+                                                <span className='text-sm text-color-secondary'>{`${FORMAT_PRICE(item.priceMonth)}/mês`}</span>
                                             </div>
                                     </li>
                                 )

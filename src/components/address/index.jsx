@@ -43,10 +43,10 @@ const Address = () => {
             <section className='flex flex-column py-3 h-full'>
                 <div>
                     <div>
-                        <h2 className='text-xs font-semibold'>{LABEL.ADDRESS}</h2>
+                        <h2 className='text-sm font-semibold'>{LABEL.ADDRESS}</h2>
                     </div>
                     <div className='pt-2'>
-                        <p className='text-xs text-color-secondary max-w-12rem'>Rua Serra da Mantiqueira 78 Jardim Planalto Carapicuíba, SP</p>
+                        <p className='text-sm text-color-secondary max-w-12rem'>Rua Serra da Mantiqueira 78 Jardim Planalto Carapicuíba, SP</p>
                     </div>
                 </div>
                 <div className='py-2 h-full flex align-items-end'>
@@ -64,13 +64,13 @@ const Address = () => {
                         <p className='text-center lg:text-left'>{LABEL.CURRENT_ADDRESS}</p>
                     </section>
                     <section className='flex lg:px-3 pt-1'>
-                        <p className='text-xs text-color-secondary lg:max-w-12rem text-left'>Rua Serra da Mantiqueira 78 Jardim Planalto Carapicuíba, SP</p>
+                        <p className='text-sm text-color-secondary lg:max-w-12rem text-left'>Rua Serra da Mantiqueira 78 Jardim Planalto Carapicuíba, SP</p>
                     </section>
                     <section className='pt-5 lg:px-3'>
                         <form className="p-fluid w-full" onSubmit={formik.handleSubmit}>
                             <section className='flex flex-column lg:flex-row gap-5'>
                                 <div className="w-full lg:max-w-12rem">
-                                    <label className='text-xs text-color-secondary' htmlFor="cep">{LABEL.CEP}</label>
+                                    <label className='text-sm text-color-secondary' htmlFor="cep">{LABEL.CEP}</label>
                                     <InputText 
                                         id="cep" 
                                         name="cep"
@@ -82,7 +82,7 @@ const Address = () => {
                             </section>
                             <section className='flex flex-column lg:flex-row gap-5 pt-3'>
                                 <div className="w-full">
-                                    <label className='text-xs text-color-secondary' htmlFor="street">{LABEL.STREET}</label>
+                                    <label className='text-sm text-color-secondary' htmlFor="street">{LABEL.STREET}</label>
                                     <InputText 
                                         id="street" 
                                         name="street"
@@ -94,7 +94,7 @@ const Address = () => {
                             </section>
                             <section className='flex flex-column lg:flex-row gap-5 pt-3'>
                                 <div className="w-full lg:max-w-12rem">
-                                    <label className='text-xs text-color-secondary' htmlFor="number">{LABEL.NUMBER}</label>
+                                    <label className='text-sm text-color-secondary' htmlFor="number">{LABEL.NUMBER}</label>
                                     <InputText 
                                         id="number" 
                                         name="number"
@@ -104,7 +104,7 @@ const Address = () => {
                                         className={`p-inputtext-lg block text-sm`}/>
                                 </div>
                                 <div className="w-full">
-                                    <label className='text-xs text-color-secondary' htmlFor="complement">{LABEL.COMPLEMENT}</label>
+                                    <label className='text-sm text-color-secondary' htmlFor="complement">{LABEL.COMPLEMENT}</label>
                                     <InputText 
                                         id="complement" 
                                         name="complement"
@@ -116,7 +116,7 @@ const Address = () => {
                             </section>
                             <section className='flex flex-column lg:flex-row gap-5 pt-3'>
                                 <div className="w-full">
-                                    <label className='text-xs text-color-secondary' htmlFor="neighborhood">{LABEL.NEIGHBORHOOD}</label>
+                                    <label className='text-sm text-color-secondary' htmlFor="neighborhood">{LABEL.NEIGHBORHOOD}</label>
                                     <InputText 
                                         id="neighborhood" 
                                         name="neighborhood"
@@ -128,7 +128,7 @@ const Address = () => {
                             </section>
                             <section className='flex flex-column lg:flex-row gap-5 pt-3'>
                                 <div className="w-full">
-                                    <label className='text-xs text-color-secondary' htmlFor="city">{LABEL.CITY}</label>
+                                    <label className='text-sm text-color-secondary' htmlFor="city">{LABEL.CITY}</label>
                                     <InputText 
                                         id="city" 
                                         name="city"
@@ -138,7 +138,7 @@ const Address = () => {
                                         className={`p-inputtext-lg block text-sm`}/>
                                 </div>
                                 <div className="w-full lg:max-w-12rem">
-                                    <label className='text-xs text-color-secondary' htmlFor="state">{LABEL.STATE}</label>
+                                    <label className='text-sm text-color-secondary' htmlFor="state">{LABEL.STATE}</label>
                                     <InputText 
                                         id="state" 
                                         name="state"

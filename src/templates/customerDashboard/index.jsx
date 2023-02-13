@@ -9,7 +9,8 @@ import { SigninContext } from '../../contexts/ SigninContext'
 import Header from '../../components/header'
 import MyData from '../../components/myData';
 import MySubscriptions from '../../components/mySubscriptions'
-import MenuMobile from '../../components/MenuMobile'
+import MenuMobile from '../../components/menuMobile'
+import Sac from '../../components/sac'
 import useToken from '../../hooks/useAuth.hook';
 
 import './index.css'
@@ -73,6 +74,8 @@ const CustomerDashboard = ({
                 return <MySubscriptions notification={notification}/>
             case 1:
                 return <MyData notification={notification}/>
+            case 3:
+                return <Sac notification={notification}/>
             default:
                 return <h1>ERROR</h1>
         }

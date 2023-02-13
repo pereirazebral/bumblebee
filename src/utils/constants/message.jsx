@@ -1,6 +1,9 @@
 const MESSAGE = {
     USER_REQUIRED: 'Usuário é obrigatório',
     EMAIL_REQUIRED: 'Email é obrigatório',
+    ROOF_REQUIRED: 'Cobertura é obrigatório',
+    ADDRESS_REQUIRED: 'Endereço é obrigatório',
+    SUBJECT_REQUIRED: 'Assunto é obrigatório',
     PASSWORD_REQUIRED: 'Senha é obrigatória',
     FORGOT_YOUR_EMAIL:'Esqueceu seu email?',
     FORGOT_YOUR_EMAIL_MESSAGE: 'Por favor, envie seu Nome e CPF para',
@@ -13,8 +16,15 @@ const MESSAGE = {
     COVERAGE_TITLE: 'Edite o seu limite de cobertura',
     COVERAGE_DESCRIPTION: 'Lembrando que ele é referente a quantia máxima que poderia ser recebida ao acionar essa cobertura.',
     ERROR_DEFAULT: 'Ops! Algo de errado aconteceu',
-    ERROR_DEFAULT_MESSAGE: 'Percebemos um erro, tente novamente mais tarde.'
-
+    ERROR_DEFAULT_MESSAGE: 'Percebemos um erro, tente novamente mais tarde.',
+    SAC_SUCESS: 'Acionamento enviado',
+    SAC_SUCESS_MESSAGE: 'Nossa equipe recebeu o seu acionamento. Em breve entraremos em contato com a resposta para sua solicitação.',
+    SAC_TITLE: 'Tem alguma reclamação?',
+    SAC_SUB_TITLE: 'Mande para gente',
+    ROOF_SELECT: 'Sobre qual cobertura deseja falar?*',
+    ADDRESS_BY_ROOF: 'Endreço da cobertura*',
+    SUBJECT_BY_CONTACT: 'Assundo do contato*',
+    MESSAGE_ABOUT: 'Conte-nos mais sobre'
 
 }
 export default MESSAGE

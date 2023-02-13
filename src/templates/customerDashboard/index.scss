@@ -2,38 +2,47 @@
 
 .bumblebee__menu-list-buttons{
 
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
     li{
         list-style: none;
     }
 
-    .p-button-lg{
-        height: 64px;
-        width: 100%;
-        border-radius: 8px;
-        box-shadow: none;
+    .p-button{
 
-        &:hover{
-            color: $--orange-22 !important;
-        }
+        &.p-button-lg{
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: none;
+            padding: 10px;
+
+            &:hover{
+                color: $--orange-22 !important;
+            }
         
 
-        .p-button-label{
-            font-weight: 500;
-            font-size: 0.6rem;
-            text-align: center;
-        }
+            .p-button-label{
+                font-weight: 400;
+                text-align: center;
+            }
 
-        .p-button-icon{
-            margin-right: 0;
+            .p-button-icon{
+                margin-right: 0;
+            }
         }
     }
 
     
 
     .bumblebee__p-button__active{
-        background: rgba(0, 123, 255, 0.04);
-        color: $--orange-22 !important;
-        border-color: transparent;
+
+        &.p-button.p-button-text{
+            background: rgba(0, 123, 255, 0.04);
+            color: $--orange-22 !important;
+            border-color: transparent;
+        }
     }
 }
 

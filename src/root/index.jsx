@@ -36,7 +36,7 @@ function Root() {
             element={ token !== '' ? <Navigate replace to={ROUTE.CUSTOMER_DASHBOARD}/> :  <Login notification={notification}
             setUserToken={setToken}/> } />
           <Route path={ROUTE.CUSTOMER_DASHBOARD} 
-            element={token !== '' ?
+            element={token === '' ?
             <CustomerDashboard notification={notification}/> : <Navigate replace to={ROUTE.LOGIN}/> } />
         </Routes>
         <Toast ref={notification} position="bottom-left" />

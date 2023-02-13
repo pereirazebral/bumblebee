@@ -43,7 +43,7 @@ const ResetPassword = ({
     
     const isFormFieldValid = (name) => !!(formik.touched[name] && formik.errors[name]);
     const getFormErrorMessage = (name) => {
-        return isFormFieldValid(name) && <small className="p-error text-xs">{formik.errors[name]}</small>;
+        return isFormFieldValid(name) && <small className="p-error text-sm">{formik.errors[name]}</small>;
     };
 
     return(
