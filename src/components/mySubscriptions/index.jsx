@@ -68,7 +68,6 @@ const MySubscriptions = () => {
     ];
 
     const handleMenuAddBeneficiary = () => {
-        console.log("handleMenuAddBeneficiary")
         setIsOpenModalAddBeneficiary(true)
     }
 
