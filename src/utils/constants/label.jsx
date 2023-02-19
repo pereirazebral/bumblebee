@@ -45,7 +45,13 @@ const LABEL = {
     STATE: 'Estado',
     NEIGHBORHOOD: 'Bairro',
     SAVE_NEW_ADDRESS: 'Salvar novo endereço',
-    EXIT: 'Sair'
+    EXIT: 'Sair',
+    ASSISTS: 'Assistências',
+    ELETROASSIST :"Eletroassist",
+    HELP_DESK: 'Help Desk',
+    PET: 'Pet',
+    EMERGENCY:'Emergencial',
+    PAYMENT: 'Payment'
 
 
 
