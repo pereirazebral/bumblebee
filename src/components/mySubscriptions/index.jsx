@@ -7,9 +7,10 @@ import Coverage from '../coverage';
 import Address from '../address';
 import Assists from '../assists';
 import Payment from '../payment'
-
+import Beneficiary from '../beneficiary';
 import './index.css'
 import { ReactComponent as Company } from '../../assets/imagens/company.svg'
+import { useState } from 'react';
 const __MOCK__ = [
     {
         subscriptionsTitle: "Plano 1201201201"
@@ -22,6 +23,8 @@ const __MOCK__ = [
 
 
 const MySubscriptions = () => {
+
+    const [isOpenModalAddBeneficiary, setIsOpenModalAddBeneficiary] = useState(false)
 
     const menu = useRef(null);
     const items = [
@@ -53,7 +56,7 @@ const MySubscriptions = () => {
                 {
                     label: LABEL.ADD_BENEFICIARY,
                     icon: 'pi pi-plus',
-                    command:(e) => console.log(e)
+                    command:() => handleMenuAddBeneficiary()
                 },
                 {
                     label: LABEL.CANCEL_PLAN,
@@ -63,6 +66,15 @@ const MySubscriptions = () => {
             ]
         }
     ];
+
+    const handleMenuAddBeneficiary = () => {
+        console.log("handleMenuAddBeneficiary")
+        setIsOpenModalAddBeneficiary(true)
+    }
+
+    const handleHideAddBeneficiary = () => {
+        setIsOpenModalAddBeneficiary(false)
+    }
 
     return(
        <>
@@ -103,6 +115,8 @@ const MySubscriptions = () => {
                 </section>
             )
         })}
+
+        <Beneficiary visible={isOpenModalAddBeneficiary} handleOnHide={ () => handleHideAddBeneficiary()}/>
        
         </>
     )

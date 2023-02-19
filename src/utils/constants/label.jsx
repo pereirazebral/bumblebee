@@ -54,7 +54,8 @@ const LABEL = {
     PAYMENT: 'Pagamento',
     WITH_END: 'com final',
     CHANGE_PAYMENT: 'Alterar forma de pagamento',
-    ADD_BENEFICIARY: 'Incluir Beneficiário'
+    ADD_BENEFICIARY: 'Incluir Beneficiário(a)',
+    SAVE_NEW_BENEFICIARY:'Salvar novo beneficiário'
 
 
 }

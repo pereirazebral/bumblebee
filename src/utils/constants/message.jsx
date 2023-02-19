@@ -29,7 +29,9 @@ const MESSAGE = {
     INCLUDED_THE_PACKAGE: 'Já incluso no pacote!',
     MONTHLY_PLAN: 'Plano mensal de',
     AUTOMATIC_RENOVATION: 'Renovação automática todo dia',
-    PROGRAMED_PAYMENT: 'O próximo pagamento está programado para acontecer no cartão'
+    PROGRAMED_PAYMENT: 'O próximo pagamento está programado para acontecer no cartão',
+    ADD_BENEFICIARY_INFO_1:'Para seguro de locatário, a indenização referente ao prédio será paga ao proprietário do imóvel.',
+    ADD_BENEFICIARY_INFO_2:'Caso queira, indique abaixo o beneficiário (proprietário do imóvel):'
 
 }
 export default MESSAGE
