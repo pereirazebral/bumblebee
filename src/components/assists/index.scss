@@ -1,0 +1,8 @@
+@import '../../root/variables';
+.bumblebee__assists-container-section{
+    width: 200px;
+
+    @media(max-width: $--media-md){
+        width: 100%;
+    }
+}

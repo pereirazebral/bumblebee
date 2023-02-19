@@ -144,3 +144,16 @@ body{
     width: 90%;
   }
 }
+
+.p-inputswitch .p-inputswitch-slider{
+  border-radius: 12px;
+}
+
+.p-inputswitch .p-inputswitch-slider::before{
+  border-radius: 10px;
+}
+
+.p-inputswitch.p-inputswitch-checked .p-inputswitch-slider,
+.p-inputswitch.p-inputswitch-checked:not(.p-disabled):hover .p-inputswitch-slider{
+  background: $--primary-color;
+}

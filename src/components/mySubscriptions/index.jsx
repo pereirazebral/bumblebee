@@ -5,6 +5,7 @@ import { Button } from 'primereact/button';
 import LABEL from '../../utils/constants/label';
 import Coverage from '../coverage';
 import Address from '../address';
+import Assists from '../assists';
 import './index.css'
 import { ReactComponent as Company } from '../../assets/imagens/company.svg'
 const __MOCK__ = [
@@ -83,6 +84,9 @@ const MySubscriptions = () => {
                             <Coverage/>
                             <div className='bumblebee__container-section ml-0 pl-0 lg:ml-3 lg:pl-3'>
                                 <Address/>
+                            </div>
+                            <div className='bumblebee__container-section ml-0 pl-0 lg:ml-3 lg:pl-3'>
+                                <Assists/>
                             </div>
                         </section>
                     </Card>

@@ -2,9 +2,10 @@
 .bumblebee__container-menu-mobile{
    
     .bumblebee__menu-list-buttons{
-    display: flex;
-    justify-content: space-between;
-    padding-top: 0 !important;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 0 !important;
 
     li{
         padding-bottom: 0 !important;

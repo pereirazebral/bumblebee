@@ -24,7 +24,9 @@ const MESSAGE = {
     ROOF_SELECT: 'Sobre qual cobertura deseja falar?*',
     ADDRESS_BY_ROOF: 'Endreço da cobertura*',
     SUBJECT_BY_CONTACT: 'Assundo do contato*',
-    MESSAGE_ABOUT: 'Conte-nos mais sobre'
+    MESSAGE_ABOUT: 'Conte-nos mais sobre',
+    MESSAGE_ASSISTS: 'Emergencial: Plano emergencial 24h para serviços de chaveiro, encanador, eletricista e vidraceiro até 2 vezes por mês cada serviço.',
+    INCLUDED_THE_PACKAGE: 'Já incluso no pacote!'  
 
 }
 export default MESSAGE
