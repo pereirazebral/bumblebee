@@ -22,12 +22,10 @@ const CustomerDashboard = ({
     user,
     notification
 }) => {
-    const navigate = useNavigate()
     const {removeToken } = useToken()
     const [ menuActive, setMenuActive] = useState(0)
     const [ titleHeader, setTitleHeader] = useState('')
-    const [isOpenModalExit, setIsOpenModalExit] = useState(false)
-
+    
     useEffect( () => {
         setTitleHeader(MENU[0].label)
     },[])
@@ -43,8 +41,8 @@ const CustomerDashboard = ({
     }
 
     const logout = () => {
-        console.log("chamou")
-        removeToken()
+        //removeToken()
+        window.location.href = '/login'
     }
 
     const confirm2 = () => {
@@ -58,10 +56,6 @@ const CustomerDashboard = ({
             accept: () => logout()
         });
     };
-
-    const handleHideModalExit = () => {
-        setIsOpenModalExit(false)
-    }
 
     const handleClickMenuHeader = (index, label) => {
             setMenuActive(index) 

@@ -72,7 +72,8 @@ const Login = ({
             return errors;
         },
         onSubmit: (data) => {
-            authLogin(data.user, data.password)
+            //authLogin(data.user, data.password)
+            window.location.href = '/area-do-cliente'
         },
     });
 
