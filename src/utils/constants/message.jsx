@@ -35,7 +35,9 @@ const MESSAGE = {
     CHANGE_PAYMENT_INFO_1:'Selecione abaixo um dos cartões cadastrados na sua conta para utilizar no pagamento das próximas mensalidades dessa assinatura.',
     ADD_NEW_CARD_INFO_1: 'Preencha os campos abaixo para cadastrar um novo cartão',
     ADD_NEW_CARD_INFO_2: 'Após concluir a adição,esse cartão ficará salvo e você deverá selecioná-lo na próxima etapa para concluir a alteração da forma de pagamento.',
-    ADD_NEW_CARD_INFO_3: 'O que é CVV? É um código de segurança de 3 dígitos, impresso no verso de cartões de crédito. Importante: Em cartões American Express você encontra o CVV com 4 dígitos e na frente.'
+    ADD_NEW_CARD_INFO_3: 'O que é CVV? É um código de segurança de 3 dígitos, impresso no verso de cartões de crédito. Importante: Em cartões American Express você encontra o CVV com 4 dígitos e na frente.',
+    EXIT_INFO: 'Deseja realmente sair? Alterações não salvas serão perdidas.',
+    SINISTER_OPEN: 'Para sinistros e assistências Ligue 0800 7 754 056.'
     
 
 }

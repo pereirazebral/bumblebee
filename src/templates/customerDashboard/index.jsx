@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 import PropTypes from 'prop-types';
 import { Button } from 'primereact/button'
+import { ConfirmDialog, confirmDialog } from 'primereact/confirmdialog';
 import Logo from '../../assets/imagens/logo-min.png'
 import MENU from '../../utils/constants/menu'
 import { SigninContext } from '../../contexts/ SigninContext'
@@ -11,9 +12,12 @@ import MyData from '../../components/myData';
 import MySubscriptions from '../../components/mySubscriptions'
 import MenuMobile from '../../components/menuMobile'
 import Sac from '../../components/sac'
+import Sinister from '../../components/sinister'
 import useToken from '../../hooks/useAuth.hook';
 
 import './index.css'
+import MESSAGE from '../../utils/constants/message';
+import LABEL from '../../utils/constants/label';
 const CustomerDashboard = ({
     user,
     notification
@@ -22,7 +26,8 @@ const CustomerDashboard = ({
     const {removeToken } = useToken()
     const [ menuActive, setMenuActive] = useState(0)
     const [ titleHeader, setTitleHeader] = useState('')
-    
+    const [isOpenModalExit, setIsOpenModalExit] = useState(false)
+
     useEffect( () => {
         setTitleHeader(MENU[0].label)
     },[])
@@ -30,7 +35,7 @@ const CustomerDashboard = ({
     const handleClickMenu = (item) => {
         const { index, label} = item
         if(index === 4){
-            logout()
+            confirm2()
         }else{
             setMenuActive(index) 
             setTitleHeader(label)
@@ -38,7 +43,24 @@ const CustomerDashboard = ({
     }
 
     const logout = () => {
+        console.log("chamou")
         removeToken()
+    }
+
+    const confirm2 = () => {
+        confirmDialog({
+            message: MESSAGE.EXIT_INFO,
+            header: LABEL.BMG_SEGUROS,
+            icon: 'pi pi-info-circle',
+            acceptClassName: 'p-button-danger',
+            acceptLabel: LABEL.YES,
+            rejectLabel: LABEL.NO,
+            accept: () => logout()
+        });
+    };
+
+    const handleHideModalExit = () => {
+        setIsOpenModalExit(false)
     }
 
     const handleClickMenuHeader = (index, label) => {
@@ -74,37 +96,42 @@ const CustomerDashboard = ({
                 return <MySubscriptions notification={notification}/>
             case 1:
                 return <MyData notification={notification}/>
+            case 2:
+                return <Sinister notification={notification}/>
             case 3:
                 return <Sac notification={notification}/>
             default:
-                return <h1>ERROR</h1>
+                return <MySubscriptions notification={notification}/>
         }
     }
     
     
     return(
-        <section className='grid lg:h-screen mr-0 mt-0 ml-0'>
-            <section className='col-1 hidden lg:block bg__black-33 py-6 px-1'>
-                <section className='flex flex-column align-items-center'>
-                    <div className=''>
-                        <img className='bumblebee__logo_min' src={Logo} alt="logo-min"/>
-                    </div>
-                    <div>
-                        {getMenu()}
-                    </div>
+        <>
+            <section className='grid lg:h-screen mr-0 mt-0 ml-0'>
+                <section className='col-1 hidden lg:block bg__black-33 py-6 px-1'>
+                    <section className='flex flex-column align-items-center'>
+                        <div className=''>
+                            <img className='bumblebee__logo_min' src={Logo} alt="logo-min"/>
+                        </div>
+                        <div>
+                            {getMenu()}
+                        </div>
+                    </section>
+                </section>
+            <section className='col-12 lg:col-11 p-0 lg:p-2'>
+                <section className='py-5 lg:py-6 px-3 lg:px-5 max__1100 m-full lg:mx-auto flex flex-column '>
+                    <Header title={titleHeader} handleClickMenuHeader={handleClickMenuHeader}/>
+                    <section className='py-6'> 
+                        {getContent()}
+                        {menuActive !== 2 && <Sinister/> }
+                    </section>
+                    <MenuMobile menu={getMenu()}/>
+                </section>
                 </section>
             </section>
-           <section className='col-12 lg:col-11 p-0 lg:p-2'>
-            <section className='py-5 lg:py-6 px-3 lg:px-5 max__1100 m-full lg:mx-auto flex flex-column '>
-                <Header title={titleHeader} handleClickMenuHeader={handleClickMenuHeader}/>
-                <section className='py-6'> 
-                    {getContent()}
-                </section>
-                <MenuMobile menu={getMenu()}/>
-            </section>
-            </section>
-        </section>
-       
+            <ConfirmDialog />
+        </>
     )
 }
 CustomerDashboard.propTypes = {

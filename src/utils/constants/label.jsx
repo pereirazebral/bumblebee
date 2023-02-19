@@ -62,7 +62,10 @@ const LABEL = {
     NAME_THE_CARD:'Nome no cartão*',
     NUMBER_THE_CARD: 'Número do cartão*',
     VALIDITY: 'Validade*',
-    CVV: 'CVV*'
+    CVV: 'CVV*',
+    YES: 'Sim',
+    NO: 'Não',
+    BMG_SEGUROS: 'BMG SEGUROS'
 
 
 }

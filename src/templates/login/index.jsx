@@ -161,7 +161,7 @@ const Login = ({
 
                     <div>
                         <Button label={LABEL.PASSWORD_RESET} 
-                            className="p-button-link  p-0"
+                            className="p-button-link p-0 p-button-lg"
                             onClick={() => showPasswordReset()}
                             disabled={isLoadingRequest}/>
                     </div>
