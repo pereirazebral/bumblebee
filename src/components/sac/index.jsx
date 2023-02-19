@@ -4,8 +4,10 @@ import { showNotification } from "../../utils/notification"
 import { Card } from 'primereact/card';
 import { Dropdown } from 'primereact/dropdown';
 import { InputTextarea } from 'primereact/inputtextarea';
+import { Button } from 'primereact/button';
 import MESSAGE from '../../utils/constants/message';
 import CONFIG from '../../utils/constants/config';
+import LABEL from '../../utils/constants/label';
 const Sac = ({
     notification
 }) => {
@@ -109,7 +111,11 @@ const Sac = ({
                                     autoResize />
                             </div>
                         </section>
-                        
+                        <section className='mt-6 flex justify-content-end'>
+                             <Button type="submit" 
+                                label={LABEL.SEND} 
+                                className="p-button-lg w-auto"/>
+                        </section>
                     </form>
                 </Card>
             </div>

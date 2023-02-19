@@ -65,7 +65,8 @@ const LABEL = {
     CVV: 'CVV*',
     YES: 'Sim',
     NO: 'Não',
-    BMG_SEGUROS: 'BMG SEGUROS'
+    BMG_SEGUROS: 'BMG SEGUROS',
+    SEND: 'Enviar'
 
 
 }

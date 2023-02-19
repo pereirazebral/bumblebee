@@ -51,7 +51,7 @@ const ResetPassword = ({
             visible={visible} 
             onHide={() => onHide()} 
             breakpoints={{'960px': '95vw'}}
-            style={{width: '50vw'}}>
+            style={{width: '30vw'}}>
                 <section className='my-3'>
                     <h3 className='text-center'>{MESSAGE.FORGOT_YOUR_PASSWORD_MESSAGE}</h3>
                     <form className="bumblebee__login_form p-fluid w-full" onSubmit={formik.handleSubmit}>
