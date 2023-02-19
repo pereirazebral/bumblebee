@@ -35,7 +35,7 @@ const Beneficiary = ({
                 <div className='pt-3'>
                 <form className="p-fluid w-full" onSubmit={formik.handleSubmit}>
                     <div className="w-full">
-                        <label className='text-color-secondary' htmlFor="cep">{LABEL.NAME}</label>
+                        <label className='text-color-secondary' htmlFor="name">{LABEL.NAME}</label>
                         <InputText 
                             id="name" 
                             name="name"
@@ -47,7 +47,7 @@ const Beneficiary = ({
                     <div className="w-full pt-3">
                         <label className='text-color-secondary' htmlFor="cep">{LABEL.CPF}</label>
                         <InputMask 
-                                mask='999.999.999-99' 
+                            mask='999.999.999-99' 
                             id="cpf" 
                             name="cpf"
                             type="text"
@@ -55,7 +55,7 @@ const Beneficiary = ({
                             onChange={formik.handleChange}
                             className={`p-inputtext-lg block`}/>
                     </div>
-                    <div className='mt-6 flex justify-content-end'>
+                    <div className='pt-6 flex justify-content-end'>
                         <Button label={LABEL.SAVE_NEW_BENEFICIARY} 
                             className="p-button-lg w-auto" 
                             type="submit" />

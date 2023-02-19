@@ -31,7 +31,12 @@ const MESSAGE = {
     AUTOMATIC_RENOVATION: 'Renovação automática todo dia',
     PROGRAMED_PAYMENT: 'O próximo pagamento está programado para acontecer no cartão',
     ADD_BENEFICIARY_INFO_1:'Para seguro de locatário, a indenização referente ao prédio será paga ao proprietário do imóvel.',
-    ADD_BENEFICIARY_INFO_2:'Caso queira, indique abaixo o beneficiário (proprietário do imóvel):'
+    ADD_BENEFICIARY_INFO_2:'Caso queira, indique abaixo o beneficiário (proprietário do imóvel):',
+    CHANGE_PAYMENT_INFO_1:'Selecione abaixo um dos cartões cadastrados na sua conta para utilizar no pagamento das próximas mensalidades dessa assinatura.',
+    ADD_NEW_CARD_INFO_1: 'Preencha os campos abaixo para cadastrar um novo cartão',
+    ADD_NEW_CARD_INFO_2: 'Após concluir a adição,esse cartão ficará salvo e você deverá selecioná-lo na próxima etapa para concluir a alteração da forma de pagamento.',
+    ADD_NEW_CARD_INFO_3: 'O que é CVV? É um código de segurança de 3 dígitos, impresso no verso de cartões de crédito. Importante: Em cartões American Express você encontra o CVV com 4 dígitos e na frente.'
+    
 
 }
 export default MESSAGE

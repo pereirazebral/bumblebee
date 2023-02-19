@@ -45,13 +45,13 @@ const Sac = ({
 
     const isFormFieldValid = (name) => !!(formik.touched[name] && formik.errors[name]);
     const getFormErrorMessage = (name) => {
-        return isFormFieldValid(name) && <small className="p-error text-sm">{formik.errors[name]}</small>;
+        return isFormFieldValid(name) && <small className="p-error ">{formik.errors[name]}</small>;
     };
 
     return(
         <section>        
             <h3 className='text-lg text-color-secondary'>{MESSAGE.SAC_TITLE}</h3>
-            <p className='text-sm text-color-secondary'>{MESSAGE.SAC_SUB_TITLE}</p>
+            <p className=' text-color-secondary'>{MESSAGE.SAC_SUB_TITLE}</p>
             <div className='mt-4'>
                 <Card>
                     <form className="p-fluid w-full" onSubmit={formik.handleSubmit}>
@@ -64,7 +64,7 @@ const Sac = ({
                                     onChange={formik.handleChange}
                                     options={[]}
                                     optionLabel="roof" 
-                                    className={`p-dropdown-lg text-sm ${classNames({ 'p-invalid': isFormFieldValid('roof') })}`}/>
+                                    className={`p-dropdown-lg  ${classNames({ 'p-invalid': isFormFieldValid('roof') })}`}/>
                                     
                                 {getFormErrorMessage('roof')}
                             </div>
@@ -78,7 +78,7 @@ const Sac = ({
                                     onChange={formik.handleChange}
                                     options={[]}
                                     optionLabel="address" 
-                                    className={`p-dropdown-lg text-sm ${classNames({ 'p-invalid': isFormFieldValid('address') })}`}/>
+                                    className={`p-dropdown-lg  ${classNames({ 'p-invalid': isFormFieldValid('address') })}`}/>
                                     
                                 {getFormErrorMessage('address')}
                             </div>
@@ -92,7 +92,7 @@ const Sac = ({
                                     onChange={formik.handleChange}
                                     options={[]}
                                     optionLabel="subject" 
-                                    className={`p-dropdown-lg text-sm ${classNames({ 'p-invalid': isFormFieldValid('subject') })}`}/>
+                                    className={`p-dropdown-lg  ${classNames({ 'p-invalid': isFormFieldValid('subject') })}`}/>
                                     
                                 {getFormErrorMessage('subject')}
                             </div>

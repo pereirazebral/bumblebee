@@ -60,7 +60,7 @@ const MyData = ({
 
     const isFormFieldValid = (name) => !!(formik.touched[name] && formik.errors[name]);
     const getFormErrorMessage = (name) => {
-        return isFormFieldValid(name) && <small className="p-error text-sm">{formik.errors[name]}</small>;
+        return isFormFieldValid(name) && <small className="p-error ">{formik.errors[name]}</small>;
     };
 
     return (
@@ -77,7 +77,7 @@ const MyData = ({
                 <form className="p-fluid w-full" onSubmit={formik.handleSubmit}>
                     <section className='flex flex-column lg:flex-row gap-5'>
                         <div className="w-full">
-                        <label className='text-sm text-color-secondary' htmlFor="cpf">{LABEL.CPF}</label>
+                        <label className=' text-color-secondary' htmlFor="cpf">{LABEL.CPF}</label>
                             <InputMask
                                 mask='999.999.999-99' 
                                 id="cpf" 
@@ -85,26 +85,26 @@ const MyData = ({
                                 type="text"
                                 value={formik.values.cpf}
                                 onChange={formik.handleChange}
-                                className={`p-inputtext-lg block text-sm ${classNames({ 'p-invalid': isFormFieldValid('cpf') })}`}
+                                className={`p-inputtext-lg block  ${classNames({ 'p-invalid': isFormFieldValid('cpf') })}`}
                                 readOnly={!isEdit}/>
                             {getFormErrorMessage('cpf')}
                         </div>
                         <div className="w-full">
-                            <label className='text-sm text-color-secondary' htmlFor="name">{LABEL.NAME}</label>
+                            <label className=' text-color-secondary' htmlFor="name">{LABEL.NAME}</label>
                             <InputText 
                                 id="name" 
                                 name="name"
                                 type="text"
                                 value={formik.values.name}
                                 onChange={formik.handleChange}
-                                className={`p-inputtext-lg block text-sm ${classNames({ 'p-invalid': isFormFieldValid('name') })}`}
+                                className={`p-inputtext-lg block  ${classNames({ 'p-invalid': isFormFieldValid('name') })}`}
                                 readOnly={!isEdit}/>
                             {getFormErrorMessage('name')}
                         </div>
                     </section>
                     <section className='flex flex-column lg:flex-row gap-5 pt-3'>
                         <div className=" w-full">
-                            <label className='text-sm text-color-secondary' htmlFor="email">{LABEL.EMAIL}</label>
+                            <label className=' text-color-secondary' htmlFor="email">{LABEL.EMAIL}</label>
                             <InputText 
                                 id="email" 
                                 name="email"
@@ -112,12 +112,12 @@ const MyData = ({
                                 value={formik.values.email}
                                 placeholder={LABEL.EMAIL}
                                 onChange={formik.handleChange}
-                                className={`p-inputtext-lg block text-sm ${classNames({ 'p-invalid': isFormFieldValid('email') })}`}
+                                className={`p-inputtext-lg block  ${classNames({ 'p-invalid': isFormFieldValid('email') })}`}
                                 readOnly={!isEdit}/>
                             {getFormErrorMessage('email')}
                         </div>
                         <div className="w-full">
-                            <label className='text-sm text-color-secondary' htmlFor="birthDate">{LABEL.BIRTH_DATE}</label>
+                            <label className=' text-color-secondary' htmlFor="birthDate">{LABEL.BIRTH_DATE}</label>
                             <InputMask 
                                 mask='99/99/9999'
                                 id="birthDate" 
@@ -125,14 +125,14 @@ const MyData = ({
                                 type="text"
                                 value={formik.values.birthDate}
                                 onChange={formik.handleChange}
-                                className={`p-inputtext-lg block text-sm ${classNames({ 'p-invalid': isFormFieldValid('birthDate') })}`}
+                                className={`p-inputtext-lg block  ${classNames({ 'p-invalid': isFormFieldValid('birthDate') })}`}
                                 readOnly={!isEdit}/>
                             {getFormErrorMessage('birthDate')}
                         </div>
                     </section>
                     <section className='flex flex-column lg:flex-row gap-5 pt-3'>
                         <div className=" w-full">
-                            <label className='text-sm text-color-secondary' htmlFor="genre">{LABEL.GENRE}</label>
+                            <label className=' text-color-secondary' htmlFor="genre">{LABEL.GENRE}</label>
                                 <Dropdown 
                                     id="genre" 
                                     name="genre"
@@ -140,13 +140,13 @@ const MyData = ({
                                     onChange={formik.handleChange}
                                     options={GENRES}
                                     optionLabel="name" 
-                                    className={`p-dropdown-lg text-sm ${classNames({ 'p-invalid': isFormFieldValid('genre') })}`}
+                                    className={`p-dropdown-lg  ${classNames({ 'p-invalid': isFormFieldValid('genre') })}`}
                                     disabled={!isEdit}/>
                                 
                                 {getFormErrorMessage('genre')}
                         </div>
                         <div className="w-full">
-                            <label className='text-sm text-color-secondary' htmlFor="phone">{LABEL.PHONE}</label>
+                            <label className=' text-color-secondary' htmlFor="phone">{LABEL.PHONE}</label>
                             <InputMask 
                                 mask='(99)99999-9999'
                                 id="phone" 
@@ -154,7 +154,7 @@ const MyData = ({
                                 type="text"
                                 value={formik.values.phone}
                                 onChange={formik.handleChange}
-                                className={`p-inputtext-lg block text-sm ${classNames({ 'p-invalid': isFormFieldValid('phone') })}`}
+                                className={`p-inputtext-lg block  ${classNames({ 'p-invalid': isFormFieldValid('phone') })}`}
                                 readOnly={!isEdit}/>
                             
                             {getFormErrorMessage('phone')}

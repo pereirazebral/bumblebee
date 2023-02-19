@@ -113,7 +113,7 @@ const Login = ({
     
     const isFormFieldValid = (name) => !!(formik.touched[name] && formik.errors[name]);
     const getFormErrorMessage = (name) => {
-        return isFormFieldValid(name) && <small className="p-error text-sm">{formik.errors[name]}</small>;
+        return isFormFieldValid(name) && <small className="p-error ">{formik.errors[name]}</small>;
     };
 
 
@@ -161,26 +161,26 @@ const Login = ({
 
                     <div>
                         <Button label={LABEL.PASSWORD_RESET} 
-                            className="p-button-link text-sm p-0"
+                            className="p-button-link  p-0"
                             onClick={() => showPasswordReset()}
                             disabled={isLoadingRequest}/>
                     </div>
                     <div>
                         <Button label={LABEL.EMAIL_FORGOT} 
-                            className="p-button-link text-sm mb-5 p-0" 
+                            className="p-button-link  mb-5 p-0" 
                             onClick={() => showNotificationEmailForgot()}
                             disabled={isLoadingRequest}/>
                     </div>
                     
-                    <p className="text-sm mb-2">{LABEL.HIRE_HERE_TEXT}</p>
+                    <p className=" mb-2">{LABEL.HIRE_HERE_TEXT}</p>
 
                     <Button label={LABEL.HIRE_HERE} 
                         className="p-button-outlined" />
 
-                    <p className="text-sm mb-4 lg:mb-2 lg:flex align-items-center mt-7 text-center">Clicando em "Entrar" você concorda com nossos 
-                        <Button className="p-button-link text-sm py-0 px-1" label=' Termos e condições'/>
-                        <span className='text-sm'>e</span>
-                        <Button className="p-button-link text-sm py-0 px-1" label='Política de Privacidade'/>
+                    <p className=" mb-4 lg:mb-2 lg:flex align-items-center mt-7 text-center">Clicando em "Entrar" você concorda com nossos 
+                        <Button className="p-button-link  py-0 px-1" label=' Termos e condições'/>
+                        <span className=''>e</span>
+                        <Button className="p-button-link  py-0 px-1" label='Política de Privacidade'/>
                     </p>
                 </div>
             </section>

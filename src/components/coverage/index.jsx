@@ -42,20 +42,20 @@ const Coverage = () => {
         <>
             <section className='flex flex-column py-3 justify-content-between'>
                 <div>
-                    <h2 className='text-sm font-semibold'>{LABEL.COVERAGE}</h2>
+                    <h2 className=' font-semibold'>{LABEL.COVERAGE}</h2>
                 </div>
                 <div className='pt-2'>
-                    <p className='text-sm text-color-secondary'>{LABEL.COVERAGE_LIMIT}</p>
+                    <p className=' text-color-secondary'>{LABEL.COVERAGE_LIMIT}</p>
                 </div>
                 <div className='pt-0'>
                     <span className='text-primary text-xl font-semibold'>{FORMAT_PRICE(coverageActive?.price)}</span>
                 </div>
                 <div className='pt-2'>
-                    <p className='text-sm text-color-secondary'>{LABEL.COVERAGE_LABEL_01} <span className="font-semibold text-sm text-color">${FORMAT_PRICE(coverageActive?.price_cov01)}</span></p>
-                    <p className='text-sm text-color-secondary'>{LABEL.COVERAGE_LABEL_02} <span className="font-semibold text-sm text-color">${FORMAT_PRICE(coverageActive?.price_cov02)}</span></p>
+                    <p className=' text-color-secondary'>{LABEL.COVERAGE_LABEL_01} <span className="font-semibold  text-color">${FORMAT_PRICE(coverageActive?.price_cov01)}</span></p>
+                    <p className=' text-color-secondary'>{LABEL.COVERAGE_LABEL_02} <span className="font-semibold  text-color">${FORMAT_PRICE(coverageActive?.price_cov02)}</span></p>
                 </div>
                 <div>
-                    <Button className="p-button-text p-0 text-sm font-semibold"
+                    <Button className="p-button-text p-0  font-semibold"
                         onClick={() => handleOnClickChangeLimit()}>
                         {LABEL.CHANGE_LIMIT}
                     </Button>
@@ -63,7 +63,8 @@ const Coverage = () => {
             </section>
             <Dialog header={MESSAGE.COVERAGE_TITLE} 
                 visible={visible} 
-                onHide={() => handleOnHide()}>
+                onHide={() => handleOnHide()}
+                breakpoints={{'960px': '98vw'}} style={{width: '60vw'}}>
                 <section className='flex px-3 py-3'>
                     <p className='text-center lg:text-left'>{MESSAGE.COVERAGE_DESCRIPTION}</p>
                 </section>
@@ -73,13 +74,13 @@ const Coverage = () => {
                             __MOCK__.map((item, index) => {
                                 return(
                                     <li key={index}
-                                        className={`flex flex-column justify-content-start align-items-center card__coverage px-3 py-3 ${item.id === coverageSelect?.id && "active"}`}
+                                        className={`flex flex-column justify-content-start align-items-center bumblebee__card-coverage px-3 py-3 ${item.id === coverageSelect?.id && "active"}`}
                                         onClick={() => handleSelectCoverare(item)}>
                                             <div className='h-3rem'>
                                                 <img src={item.icon} alt='icon'/>
                                             </div>
-                                            <div className='pt-1'>
-                                                <span className='text-sm'>até</span>
+                                            <div className='pt-2'>
+                                                <span className=''>até</span>
                                             </div>
                                             <div>
                                                 <span className='text-lg font-semibold text-300 text-color-secondary price'>R$ {item.priceLabel}</span>
@@ -88,16 +89,16 @@ const Coverage = () => {
                                                 <hr className='w-full'/>
                                             </div>
                                             <div>
-                                            <span className='text-sm text-color-secondary'>{LABEL.COVERAGE_LABEL_01} <span className='text-sm font-semibold'>{FORMAT_PRICE(item.price_cov01)}</span></span>
+                                            <span className=' text-color-secondary'>{LABEL.COVERAGE_LABEL_01} <span className=' font-semibold'>{FORMAT_PRICE(item.price_cov01)}</span></span>
                                             </div>
                                             <div>
-                                                <span className='text-sm text-color-secondary'>{LABEL.COVERAGE_LABEL_02} <span className='text-sm font-semibold'>{FORMAT_PRICE(item.price_cov02)}</span></span>
+                                                <span className=' text-color-secondary'>{LABEL.COVERAGE_LABEL_02} <span className=' font-semibold'>{FORMAT_PRICE(item.price_cov02)}</span></span>
                                             </div>
                                             <div className='w-full mt-2 mb-1'>
                                                 <hr/>
                                             </div>
                                             <div>
-                                                <span className='text-sm text-color-secondary'>{`${FORMAT_PRICE(item.priceMonth)}/mês`}</span>
+                                                <span className=' text-color-secondary'>{`${FORMAT_PRICE(item.priceMonth)}/mês`}</span>
                                             </div>
                                     </li>
                                 )
@@ -108,7 +109,7 @@ const Coverage = () => {
                 { coverageSelect !== coverageActive &&
                     <section className='flex justify-content-end align-items-center'>
                         <Button label={LABEL.CONFIRM_CHANGE}
-                            className="p-button-sm"  
+                            className="p-button-lg"  
                             onClick={() => handleSetNewCoverare()}/>
                     </section>
                 }

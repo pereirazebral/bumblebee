@@ -55,7 +55,14 @@ const LABEL = {
     WITH_END: 'com final',
     CHANGE_PAYMENT: 'Alterar forma de pagamento',
     ADD_BENEFICIARY: 'Incluir Beneficiário(a)',
-    SAVE_NEW_BENEFICIARY:'Salvar novo beneficiário'
+    SAVE_NEW_BENEFICIARY:'Salvar novo beneficiário',
+    CARD_SELECTED: 'Cartão selecionado*',
+    CHANGE_CARD:'Alterar cartão',
+    ADD_NEW_CARD: 'Adicionar cartão',
+    NAME_THE_CARD:'Nome no cartão*',
+    NUMBER_THE_CARD: 'Número do cartão*',
+    VALIDITY: 'Validade*',
+    CVV: 'CVV*'
 
 
 }

@@ -29,7 +29,7 @@ const Assists = () => {
             
                 <div className='flex align-items-center'>
                     <Tooltip target=".custom-target-icon" />
-                    <h2 className='text-sm font-semibold'>{LABEL.ASSISTS}</h2>
+                    <h2 className=' font-semibold'>{LABEL.ASSISTS}</h2>
                     <i className="pi pi-exclamation-circle pl-1 custom-target-icon" data-pr-tooltip={MESSAGE.MESSAGE_ASSISTS}></i>
                 </div>
                 

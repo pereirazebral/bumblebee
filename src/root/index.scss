@@ -137,13 +137,13 @@ body{
   background-color: $--orange-22;
 }
 
-.p-dialog{
-  width: 800px;
+// .p-dialog{
+//   width: 800px;
 
-  @media(max-width: $--media-md){
-    width: 90%;
-  }
-}
+//   @media(max-width: $--media-md){
+//     width: 90%;
+//   }
+// }
 
 .p-inputswitch .p-inputswitch-slider{
   border-radius: 12px;
