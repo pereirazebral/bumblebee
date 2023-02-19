@@ -1,0 +1,8 @@
+@import '../../root/variables';
+.bumblebee__message-progamed-payment{
+    width: 240px;
+    @media(max-width: $--media-md){
+        width: 100%;
+    }
+    
+}

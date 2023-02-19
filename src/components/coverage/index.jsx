@@ -40,7 +40,7 @@ const Coverage = () => {
     
     return(
         <>
-            <section className='flex flex-column py-3'>
+            <section className='flex flex-column py-3 justify-content-between'>
                 <div>
                     <h2 className='text-sm font-semibold'>{LABEL.COVERAGE}</h2>
                 </div>
@@ -54,7 +54,7 @@ const Coverage = () => {
                     <p className='text-sm text-color-secondary'>{LABEL.COVERAGE_LABEL_01} <span className="font-semibold text-sm text-color">${FORMAT_PRICE(coverageActive?.price_cov01)}</span></p>
                     <p className='text-sm text-color-secondary'>{LABEL.COVERAGE_LABEL_02} <span className="font-semibold text-sm text-color">${FORMAT_PRICE(coverageActive?.price_cov02)}</span></p>
                 </div>
-                <div className='py-2'>
+                <div>
                     <Button className="p-button-text p-0 text-sm font-semibold"
                         onClick={() => handleOnClickChangeLimit()}>
                         {LABEL.CHANGE_LIMIT}

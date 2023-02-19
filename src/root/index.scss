@@ -157,3 +157,12 @@ body{
 .p-inputswitch.p-inputswitch-checked:not(.p-disabled):hover .p-inputswitch-slider{
   background: $--primary-color;
 }
+
+.primary-color-text{
+  color: $--primary-color;
+}
+
+.p-avatar-text{
+  font-size: 1.2rem;
+  font-weight: 600;
+}

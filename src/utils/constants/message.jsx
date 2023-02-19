@@ -26,7 +26,10 @@ const MESSAGE = {
     SUBJECT_BY_CONTACT: 'Assundo do contato*',
     MESSAGE_ABOUT: 'Conte-nos mais sobre',
     MESSAGE_ASSISTS: 'Emergencial: Plano emergencial 24h para serviços de chaveiro, encanador, eletricista e vidraceiro até 2 vezes por mês cada serviço.',
-    INCLUDED_THE_PACKAGE: 'Já incluso no pacote!'  
+    INCLUDED_THE_PACKAGE: 'Já incluso no pacote!',
+    MONTHLY_PLAN: 'Plano mensal de',
+    AUTOMATIC_RENOVATION: 'Renovação automática todo dia',
+    PROGRAMED_PAYMENT: 'O próximo pagamento está programado para acontecer no cartão'
 
 }
 export default MESSAGE

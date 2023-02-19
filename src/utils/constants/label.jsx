@@ -51,8 +51,10 @@ const LABEL = {
     HELP_DESK: 'Help Desk',
     PET: 'Pet',
     EMERGENCY:'Emergencial',
-    PAYMENT: 'Payment'
-
+    PAYMENT: 'Pagamento',
+    WITH_END: 'com final',
+    CHANGE_PAYMENT: 'Alterar forma de pagamento',
+    ADD_BENEFICIARY: 'Incluir Beneficiário'
 
 
 }

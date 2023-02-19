@@ -20,8 +20,8 @@ const Header = ({
                 <div className='flex flex-row justify-content-start lg:justify-content-end align-items-center w-full'>
                     <div className='flex flex-row-reverse md:flex-row align-items-center'>
                         <div className='flex flex-column align-items-start md:align-items-end justify-content-center pr-2'>
-                            <p className='text-sm p-0'>{user && user.name || ''}</p>
-                            <p className='text-sm p-0'>{user && user.email || ''}</p>
+                            <p className='p-0'>{user && user.name || ''}</p>
+                            <p className='p-0 text-color-secondary text-xs'>{user && user.email || ''}</p>
                         </div>
                         <Avatar label="G" 
                             className="mr-2" 

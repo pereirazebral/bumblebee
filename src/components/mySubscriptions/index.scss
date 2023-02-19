@@ -1,9 +1,17 @@
 @import '../../root/variables';
-.bumblebee__container-section{
-    border-left: 1px solid $--gray-1;
+.bumblebee__my-subscriptions{
 
-    @media(max-width: $--media-md){
-        border-top: 1px solid $--gray-1;
-        border-left: 0;
+    .p-card{
+        box-shadow: $--primary-color 1px 1px 1px 1px; 
     }
+
+    .bumblebee__container-section{
+        border-left: 1px solid $--gray-1;
+
+        @media(max-width: $--media-md){
+            border-top: 1px solid $--gray-1;
+            border-left: 0;
+        }
+    }
+
 }

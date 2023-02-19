@@ -40,7 +40,7 @@ const Address = () => {
 
     return(
        <>
-            <section className='flex flex-column py-3 h-full'>
+            <section className='flex flex-column py-3 h-full justify-content-between'>
                 <div>
                     <div>
                         <h2 className='text-sm font-semibold'>{LABEL.ADDRESS}</h2>
@@ -49,7 +49,7 @@ const Address = () => {
                         <p className='text-sm text-color-secondary max-w-12rem'>Rua Serra da Mantiqueira 78 Jardim Planalto Carapicuíba, SP</p>
                     </div>
                 </div>
-                <div className='py-2 h-full flex align-items-end'>
+                <div>
                     <Button className="p-button-text p-0 text-sm font-semibold"
                         onClick={() => handleOnClickChangeAddress()}>
                         {LABEL.CHANGE_ADDRESS}

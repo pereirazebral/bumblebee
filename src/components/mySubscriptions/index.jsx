@@ -6,6 +6,8 @@ import LABEL from '../../utils/constants/label';
 import Coverage from '../coverage';
 import Address from '../address';
 import Assists from '../assists';
+import Payment from '../payment'
+
 import './index.css'
 import { ReactComponent as Company } from '../../assets/imagens/company.svg'
 const __MOCK__ = [
@@ -49,6 +51,11 @@ const MySubscriptions = () => {
             label: LABEL.ABOUT_THE_PLAN,
             items: [
                 {
+                    label: LABEL.ADD_BENEFICIARY,
+                    icon: 'pi pi-plus',
+                    command:(e) => console.log(e)
+                },
+                {
                     label: LABEL.CANCEL_PLAN,
                     icon: 'pi pi-power-off',
                     command:(e) => console.log(e)
@@ -61,7 +68,7 @@ const MySubscriptions = () => {
        <>
         {__MOCK__.map((item, index) => {
             return(
-                <section key={index} className='flex flex-column py-3'>
+                <section key={index} className='flex flex-column py-3 bumblebee__my-subscriptions'>
                     <Card>
                         <section className='flex justify-content-between align-items-center'>
                             <div className='flex gap-2 align-items-center'>
@@ -80,13 +87,16 @@ const MySubscriptions = () => {
                                     className='p-button-rounded p-button-text'/>
                             </div>
                         </section>
-                        <section className='flex flex-column lg:flex-row align-items-top pt-3'>
+                        <section className='flex flex-column lg:flex-row justify-content-between align-items-top pt-3'>
                             <Coverage/>
                             <div className='bumblebee__container-section ml-0 pl-0 lg:ml-3 lg:pl-3'>
                                 <Address/>
                             </div>
                             <div className='bumblebee__container-section ml-0 pl-0 lg:ml-3 lg:pl-3'>
                                 <Assists/>
+                            </div>
+                            <div className='bumblebee__container-section ml-0 pl-0 lg:ml-3 lg:pl-3'>
+                                <Payment/>
                             </div>
                         </section>
                     </Card>

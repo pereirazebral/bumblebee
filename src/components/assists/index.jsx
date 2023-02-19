@@ -25,35 +25,35 @@ const Assists = () => {
     }
 
     return(
-        <section className='flex flex-column py-3 h-full bumblebee__assists-container-section'>
-            <div>
+        <section className='flex flex-column py-3 h-full bumblebee__assists-container-section justify-content-between'>
+            
                 <div className='flex align-items-center'>
                     <Tooltip target=".custom-target-icon" />
                     <h2 className='text-sm font-semibold'>{LABEL.ASSISTS}</h2>
                     <i className="pi pi-exclamation-circle pl-1 custom-target-icon" data-pr-tooltip={MESSAGE.MESSAGE_ASSISTS}></i>
                 </div>
-                <div className='pt-2'>
-                    <div className='flex align-items-center justify-content-between'>
-                        <p className='text-color-secondary'>{LABEL.ELETROASSIST}</p>
-                        <InputSwitch checked={checkedEletroassist} 
-                            onChange={(e) => onChangeEletroassist(e.value)}/>
-                    </div>
-                    <div className='flex align-items-center justify-content-between pt-3'>
-                        <p className='text-color-secondary'>{LABEL.HELP_DESK}</p>
-                        <InputSwitch checked={checkedHelpDesk} 
-                            onChange={(e) => onChangeHelpDesk(e.value)}/>
-                    </div>
-                    <div className='flex align-items-center justify-content-between pt-3'>
-                        <p className='text-color-secondary'>{LABEL.PET}</p>
-                        <InputSwitch checked={checkedPet} 
-                            onChange={(e) => onChangePet(e.value)}/>
-                    </div>
-                    <div className='flex align-items-center justify-content-between pt-3'>
-                        <p className='text-color-secondary font-bold'>{LABEL.EMERGENCY}*</p>
-                        <p className='text-color-secondary text-xs font-italic'>{MESSAGE.INCLUDED_THE_PACKAGE}</p>
-                    </div>
+                
+                <div className='flex align-items-center justify-content-between pt-2 md:pt-0'>
+                    <p className='text-color-secondary'>{LABEL.ELETROASSIST}</p>
+                    <InputSwitch checked={checkedEletroassist} 
+                        onChange={(e) => onChangeEletroassist(e.value)}/>
                 </div>
-            </div>
+                <div className='flex align-items-center justify-content-between pt-3'>
+                    <p className='text-color-secondary'>{LABEL.HELP_DESK}</p>
+                    <InputSwitch checked={checkedHelpDesk} 
+                        onChange={(e) => onChangeHelpDesk(e.value)}/>
+                </div>
+                <div className='flex align-items-center justify-content-between pt-3'>
+                    <p className='text-color-secondary'>{LABEL.PET}</p>
+                    <InputSwitch checked={checkedPet} 
+                        onChange={(e) => onChangePet(e.value)}/>
+                </div>
+                <div className='flex align-items-center justify-content-between pt-3'>
+                    <p className='text-color-secondary font-bold'>{LABEL.EMERGENCY}*</p>
+                    <p className='text-color-secondary text-xs font-italic'>{MESSAGE.INCLUDED_THE_PACKAGE}</p>
+                </div>
+                
+            
         </section>
     )
 }
