@@ -8,8 +8,6 @@
     "@testing-library/user-event": "^13.5.0",
     "env-cmd": "^10.1.0",
     "formik": "^2.2.9",
-    "gulp": "^4.0.2",
-    "gulp-sass-helper": "^1.17.0",
     "primeflex": "^3.3.0",
     "primeicons": "^6.0.1",
     "primereact": "^8.7.2",

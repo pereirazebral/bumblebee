@@ -1,12 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom'
 import PropTypes from 'prop-types';
 import { Button } from 'primereact/button'
 import { ConfirmDialog, confirmDialog } from 'primereact/confirmdialog';
 import Logo from '../../assets/imagens/logo-min.png'
 import MENU from '../../utils/constants/menu'
-import { SigninContext } from '../../contexts/ SigninContext'
+
 import Header from '../../components/header'
 import MyData from '../../components/myData';
 import MySubscriptions from '../../components/mySubscriptions'
